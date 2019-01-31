@@ -1,0 +1,8 @@
+---
+- name: Add Yarn repository key
+  apt_key:
+    url: "{{ nodejs_yarn_apt_key_url }}"
+
+- name: Add Yarn apt repository
+  apt_repository:
+    repo: "{{ nodejs_yarn_apt_repo }}"

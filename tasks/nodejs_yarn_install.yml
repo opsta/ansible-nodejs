@@ -1,0 +1,6 @@
+---
+- name: Install Yarn
+  apt:
+    name: "{{ nodejs_yarn_apt_package }}"
+    state: present
+    update_cache: yes

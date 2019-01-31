@@ -1,0 +1,8 @@
+---
+- name: Add Nodesource repository key
+  apt_key:
+    url: "{{ nodejs_apt_key_url }}"
+
+- name: Add Nodesource apt repository
+  apt_repository:
+    repo: "{{ nodejs_apt_repo }}"

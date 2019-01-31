@@ -1,0 +1,10 @@
+---
+- include_tasks: nodejs_pre.yml
+- include_tasks: nodejs_install.yml
+
+- block: # Install Yarn
+  - include_tasks: nodejs_yarn_pre.yml
+  - include_tasks: nodejs_yarn_install.yml
+  when: nodejs_yarn_enabled
+  tags:
+    - nodejs-yarn-install

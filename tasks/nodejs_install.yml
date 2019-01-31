@@ -1,0 +1,6 @@
+---
+- name: Install NodeJS
+  apt:
+    name: "{{ nodejs_apt_package }}"
+    state: present
+    update_cache: yes
